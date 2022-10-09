@@ -1,13 +1,18 @@
 package com.serenitydojo;
 
 public class Dog {
-    public String name;
+    private String name;
 
-    public String favouriteFood;
+    private String favouriteFood;
 
-    public int age;
+    private int age;
 
-    public Dog(String fido, String bone, int i) {
+    public static final String DOG_NOISE = "Woof!";
+
+    public Dog(String name, String favouriteFood, int age) {
+        this.name = name;
+        this.favouriteFood = favouriteFood;
+        this.age = age;
 
     }
 
@@ -15,16 +20,11 @@ public class Dog {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getFavouriteFood() {
-        return favouriteFood;
-    }
-
     public void setFavouriteFood(String favouriteFood) {
         this.favouriteFood = favouriteFood;
+    }
+    public String getFavouriteFood() {
+        return favouriteFood;
     }
 
     public int getAge() {
@@ -32,7 +32,11 @@ public class Dog {
 
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void makeNoise() {
+        System.out.println(DOG_NOISE);
+    }
+
+    public void feed(String food) {
+        System.out.println( name + " eat some " + food );
     }
 }
